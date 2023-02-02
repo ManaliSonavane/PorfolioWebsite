@@ -1,0 +1,243 @@
+@import url("https://font.googleapis.com/css2?family=Poppinswght@200;300;400'500;600;700&diplay=swap");
+
+*{
+  outline: none;
+  box-sizing: border-box;
+}  
+
+html{
+  scroll-behavior: smooth;
+  -webkit-font-smoothing:antialiased;
+}
+
+
+body::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100% ;
+  height:100vh;
+  background: linear-gradient(                         
+   180deg                                                   , rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.45) 100%);
+  -webkit-backdrop-filter: saturate(3);
+  backdrop-filter: saturate(3);
+}
+
+/*for background*/
+body{
+  font-family:"Poppins",sans-serif;
+  background-image:url(https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000);
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:2em;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+main{
+  background-color: rgb(255 255 255 / 31%);
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  max-width: 1250px;
+  width:100%;
+  border-radius: 5px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter:blur(20%);
+  font-weight: 500;
+  padding: 1rem 1rem 2rem 1rem;
+  overflow: auto;
+}
+
+main::-webkit-scrollbar{
+  display:none;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  border-bottom: 1.5px solid rgb(255 255 255 /35%);
+}
+
+.navbar > h1, .navbar > navigationmenu{
+  margin:10px;
+}
+
+.navigationmenu > a{
+  padding: 5px, 10px; /*x y */
+  margin-left: 10px;
+  text-decoration: none;
+  color:black;
+  display: inline-block;
+}
+
+.navigationmenu > a:hover{
+  transition: ease-in-out 300ms;
+  background-color: white;
+}
+
+
+
+.hero{
+ margin: 2rem 0;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.image{
+  height:350px;
+  width: 350px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.detail{
+  text-align: center;
+}
+
+.detail >h1{
+  font-size: 40px;
+  margin: 10px;
+}
+
+.aboutme{
+ margin:1rem;
+  text-align: center;
+}
+
+.skillsnproj{
+  margin:1rem;
+  display: grid;
+  grid-template-columns: [one] 50% [two] 50%;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% -2rem);
+}
+
+
+
+.skillsnproj > .skills, .skillsnproj > .projects{
+  min-width: 250px;
+  min-height: 250px;
+  margin: 1rem;
+}
+
+.skillsnproj > .skills, .skillsnproj > .projects{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255 255 255/31%);
+  align-content: center;
+  border:1px solid rgb(255 255 255/31%);
+  border-radius: 5px;
+  padding:1rem;
+  margin-bottom: 2rem;
+}
+
+  .heading{
+    display: block;
+    width: 90%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+.skillsnproj > .skills >img{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.projcontainer{
+  display: flex;
+  width:90%;
+}
+
+.projcontainer >.projdescription >h4{
+  margin: 0;
+}
+
+.projcontainer > .projdescription >h4{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.contact_me{
+  padding-left:20px;
+  text-align:center;
+}
+
+.contact_me img{
+  height:30px;
+  width:30px;
+}
+
+
+.linkedin{
+  padding-left:20px;
+}
+
+
+
+
+/*Media Queries*/
+
+@media screen and (max-width:480px){
+  body{
+    padding:0.8em;
+  }
+}
+
+@media only screen and (max-width:760px){
+  .navigationmenu{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:528px){
+  .skillsnproj{
+    grid-template-columns: [one] 100%;
+    grid-template-rows: [one] ;
+  }
+}
+
+@media only screen and (max-width:720px){
+  .skillsnproj{
+    grid-template-columns: [one] 100%;
+    grid-template-rows: [one] [two];
+  }
+}
+
+@media only screen and (max-width:460px){
+  .image{
+   width: 250px;
+    height: 250px;
+  }
+  
+  .details > h1{
+    font-size: 30px;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+  }
+  .details > h1{
+    font-size: 20px;
+    margin: 0;
+    font-weight: 400;
+  }
+}
